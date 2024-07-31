@@ -1,0 +1,21 @@
+#navbar {
+  padding: 3vh 4vw;
+  align-items: baseline;
+}
+
+#navbar > .name {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#navbar,
+#navbar > ul {
+  display: flex;
+}
+
+#navbar > ul {
+  list-style: none;
+  font-size: 24px;
+  gap: 4vw;
+  margin-left: auto;
+}
