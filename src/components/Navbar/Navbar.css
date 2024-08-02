@@ -19,3 +19,9 @@
   gap: 4vw;
   margin-left: auto;
 }
+
+#navbar li,
+#navbar span {
+  cursor: pointer;
+  user-select: none;
+}
