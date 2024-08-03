@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
     "framer-motion": "^11.3.21",
     "proton-engine": "^6.0.3",
     "react": "^18.3.1",
