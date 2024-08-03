@@ -1,19 +1,18 @@
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+import Particles from "@tsparticles/react";
+import { useAppSelector } from "../../state";
 import { useEffect, useState } from "react";
 
 export default function ParticlesBg() {
-  const [init, setInit] = useState(false);
+  const [isInit, setIsInit] = useState(false);
+  const { init } = useAppSelector((state) => state.particles);
+
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+    setIsInit(init);
+    console.log(init);
+  }, [init]);
 
   return (
-    init && (
+    isInit && (
       <Particles
         style={{
           position: "absolute",

@@ -45,7 +45,7 @@ export default function AnimatedText({
 
   return (
     <motion.span className={className}>
-      {displayText || <>&nbsp;</>}{" "}
+      {displayText || <>&nbsp;</>}
       {cursor && (
         <TypingCursor
           size={cursorSize}
