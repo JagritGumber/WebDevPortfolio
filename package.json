@@ -7,29 +7,36 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "bun run build && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface Env"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
+    "@tanstack/react-router": "^1.123.0",
+    "@tanstack/react-start": "^1.123.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
-    "framer-motion": "^11.3.21",
+    "framer-motion": "^10.16.16",
     "proton-engine": "^6.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
-    "react-redux": "^9.1.2"
+    "react-redux": "^9.1.2",
+    "swiper": "^11.2.10"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.4"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "wrangler": "^4.22.0"
   }
 }

@@ -1,11 +1,19 @@
 import "./Hero.css";
 import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
-import { TfiAngleRight } from "react-icons/tfi";
+import { TfiAngleDown } from "react-icons/tfi";
 import { SocialIcon, AnimatedText } from "../Micros";
 import { motion } from "framer-motion";
 import { Particles } from "..";
+import { useAppDispatch } from "../../state";
+import { useEffect } from "react";
+import { initParticles } from "../../state/features";
 
 export default function Hero() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(initParticles());
+  }, [dispatch]);
   const contents = [
     "Hi, I'm a",
     "Web Developer",
@@ -62,8 +70,7 @@ export default function Hero() {
               opacity: 1,
               y: "0%",
               transition: {
-                delay:
-                  contents.reduce((acc, curr) => acc + curr.length, 0) * 0.03,
+                delay: 1,
               },
             }}
             whileHover={{
@@ -72,7 +79,10 @@ export default function Hero() {
               color: "rgb(0, 0, 0)",
               transition: { delay: 0 },
             }}
-            onMouseEnter={() => {}}
+            onClick={() => {
+              const about = document.getElementById("about");
+              about?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
           >
             Get Started
           </motion.button>
@@ -85,8 +95,22 @@ export default function Hero() {
           01
         </motion.p>
         <div className="indicator upper">
-          <AnimatedText text="Next Page" delay={0} slow cursor={false} />
-          <motion.div
+          <AnimatedText text="Scroll Down" delay={0} slow cursor={false} />
+          <motion.button
+            style={{
+              width: "3rem",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              aspectRatio: 1,
+              borderRadius: "50%",
+              marginRight: -4,
+              backgroundColor: "#fff",
+              color: "#000",
+            }}
+            whileHover={{
+              backgroundColor: "#d9d9d9",
+            }}
             initial={{ opacity: "0%" }}
             whileInView={{
               opacity: 1,
@@ -95,7 +119,7 @@ export default function Hero() {
               },
             }}
             animate={{
-              x: ["0%", "4%", "0%"],
+              y: ["0%", "40%", "0%"],
               transition: {
                 duration: 2,
                 ease: "easeInOut",
@@ -103,9 +127,13 @@ export default function Hero() {
                 repeatType: "loop",
               },
             }}
+            onClick={() => {
+              const about = document.getElementById("about");
+              about?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
           >
-            <TfiAngleRight />
-          </motion.div>
+            <TfiAngleDown />
+          </motion.button>
         </div>
       </main>
       <Particles />

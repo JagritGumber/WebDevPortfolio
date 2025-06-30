@@ -4,12 +4,12 @@
   grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  width: 100vw;
+  width: 100%;
   height: 87vh;
   overflow: hidden;
 }
 
-#hero > .content {
+#hero>.content {
   grid-area: 1 / 2 / 8 / 7;
   display: flex;
   flex-flow: column;
@@ -18,18 +18,18 @@
   gap: 0.5rem;
 }
 
-#hero > .content > .normal {
+#hero>.content>.normal {
   font-size: 3rem;
   white-space-collapse: preserve;
 }
 
-#hero > .content > .strong {
+#hero>.content>.strong {
   font-size: 6rem;
   font-weight: 500;
   white-space-collapse: preserve;
 }
 
-#hero > .content > .light {
+#hero>.content>.light {
   font-size: 3rem;
   font-weight: 300;
   text-align: center;
@@ -38,7 +38,7 @@
   white-space-collapse: preserve;
 }
 
-#hero > .content > button {
+#hero>.content>button {
   font-size: 2rem;
   font-weight: 500;
   padding: 1rem 2rem;
@@ -46,7 +46,7 @@
   border: 2px solid rgb(255, 255, 255);
 }
 
-#hero > .socials {
+#hero>.socials {
   grid-area: 2 / 1 / 7 / 2;
   padding: 1vw;
   display: flex;
@@ -54,7 +54,8 @@
   gap: 4vh;
   justify-content: center;
 }
-#hero > .indicator {
+
+#hero>.indicator {
   grid-area: 2 / 7 / 8 / 8;
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -67,7 +68,8 @@
   display: flex;
   gap: 2rem;
 }
-#hero > .pg-number {
+
+#hero>.pg-number {
   grid-area: 7 / 1 / 8 / 2;
   padding: 0 0 3vh 3vw;
   font-size: 8rem;
