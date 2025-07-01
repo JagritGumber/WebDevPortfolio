@@ -120,6 +120,7 @@ export default function About() {
             delay: 0,
           },
         }}
+        viewport={{ once: true, amount: 0.5 }}
         whileHover={{
           backgroundColor: "rgb(255, 255, 255)",
           border: "2px solid rgb(0, 0, 0)",

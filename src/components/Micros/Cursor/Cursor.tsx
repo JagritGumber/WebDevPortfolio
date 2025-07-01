@@ -31,10 +31,10 @@ export default function Cursor({
         hidden
           ? "hidden cursor"
           : size === 2
-          ? "big cursor"
-          : size === 1
-          ? "mid cursor"
-          : "cursor"
+            ? "big cursor"
+            : size === 1
+              ? "mid cursor"
+              : "cursor"
       }`}
     />
   );

@@ -1,16 +1,24 @@
 import "./Education.css";
 import { motion } from "framer-motion"; // Import motion for animations
-import { BiBriefcaseAlt2 } from "react-icons/bi";
+import { FaSchool, FaCode, FaBook } from "react-icons/fa";
 
 const Education = () => {
   const educationData = [
+    {
+      title: "Frontend Engineer",
+      years: "2024 - Ongoing",
+      institution: "Algo One AI",
+      description:
+        "Working as a Fullstack Engineer, confirmed by our manager I do play a part in every thing there is to do in that project.",
+      icon: FaCode,
+    },
     {
       title: "Graduation",
       years: "2023 - Ongoing",
       institution: "Indira Gandhi National Open University",
       description:
-        "Currently pursuing BCA degree from Indira Gandhi National Open University to increase my potential towards the game making industry",
-      icon: BiBriefcaseAlt2,
+        "Currently pursuing BCA degree from Indira Gandhi National Open University, focusing on skills applicable to the software development industry.",
+      icon: FaSchool,
     },
     {
       title: "Schooling",
@@ -18,6 +26,7 @@ const Education = () => {
       institution: "Goodley Public School",
       description:
         "Completed my schooling through Central Board Of Secondary Education at Goodley Public School, Shalimar Bagh - Delhi.",
+      icon: FaBook,
     },
   ];
 
@@ -44,7 +53,7 @@ const Education = () => {
             </div>
             <div className="timeline-center">
               <div className="timeline-icon">
-                <BiBriefcaseAlt2 />
+                <item.icon />
               </div>
             </div>
             <div className="timeline-right">

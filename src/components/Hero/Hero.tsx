@@ -65,6 +65,7 @@ export default function Hero() {
             );
           })}
           <motion.button
+            viewport={{ once: true, amount: 0.5 }}
             initial={{ opacity: 0, y: "20%" }}
             whileInView={{
               opacity: 1,
@@ -88,6 +89,7 @@ export default function Hero() {
           </motion.button>
         </div>
         <motion.p
+          viewport={{ once: true, amount: 0.5 }}
           initial={{ opacity: 0, x: "-20%", y: "20%" }}
           whileInView={{ opacity: 1, x: "0", y: "0" }}
           className="pg-number"
@@ -97,6 +99,7 @@ export default function Hero() {
         <div className="indicator upper">
           <AnimatedText text="Scroll Down" delay={0} slow cursor={false} />
           <motion.button
+            viewport={{ once: true, amount: 0.5 }}
             style={{
               width: "3rem",
               display: "flex",

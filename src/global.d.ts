@@ -1,4 +1,5 @@
-import React, { DOMAttributes } from "react";
+import { UseInViewOptions } from "framer-motion";
+import React, { DOMAttributes, RefObject } from "react";
 
 declare module "framer-motion" {
   type PrimitiveMotionValue = number | string | number[] | string[];
@@ -32,7 +33,8 @@ declare module "framer-motion" {
     initial?: string | Record<string, MotionValue>;
     animate?: string | Record<string, MotionValue>;
     exit?: string | Record<string, MotionValue>;
-    href?: string
+    href?: string;
+    target?: string;
     transition?: TransitionProps;
     variants?: {
       [key: string]: {

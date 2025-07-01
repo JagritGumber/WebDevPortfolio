@@ -16,6 +16,13 @@ export default function Navbar() {
           initial={{ opacity: 0, y: "-50%" }}
           animate={{ opacity: 1, y: "0" }}
           transition={{ delay: 0.3 }}
+          onClick={() => {
+            const about = document.getElementById("about");
+            about?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }}
         >
           About
         </motion.li>
