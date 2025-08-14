@@ -1,6 +1,5 @@
 import { AnimatedText } from "../Micros";
 import "./ContactForm.css";
-import contactImage from "/myImage.jpeg"; // Assuming the image is in the public folder
 
 const ContactForm = () => {
   return (
