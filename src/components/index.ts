@@ -5,3 +5,4 @@ export { default as About } from "./About";
 export { default as SomeProjects } from "./SomeProjects";
 export { default as Education } from "./Education";
 export { default as ContactForm } from "./ContactForm";
+export { Footer } from "./Footer";

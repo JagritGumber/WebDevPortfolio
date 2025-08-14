@@ -49,24 +49,24 @@ const SomeProjects = () => {
       text: "Art Box",
       description:
         "Art Box is a captivating online gallery showcasing a diverse collection of stunning artworks. It provides a beautiful and immersive experience for art enthusiasts to explore various styles and mediums, celebrating creativity and visual expression.",
-      img: ["/myImage.jpeg", "/myImage.jpeg", "/myImage.jpeg"],
+      img: ["/artbox.png"],
       technologies: ["React", "TypeScript", "CSS", "HTML"],
-      viewLink: "artbox",
+      viewLink: "https://artbox.jagritgumber.com/",
     },
-    {
-      text: "Project 2",
-      description: "A brief description of Project 2.",
-      img: ["/myImage.jpeg", "/myImage.jpeg", "/myImage.jpeg"],
-      technologies: ["JavaScript", "HTML", "CSS"],
-      viewLink: "artbox",
-    },
-    {
-      text: "Project 3",
-      description: "A brief description of Project 3.",
-      img: ["/myImage.jpeg", "/myImage.jpeg", "/myImage.jpeg"],
-      technologies: ["React", "Node.js", "SQL"],
-      viewLink: "artbox",
-    },
+    // {
+    //   text: "Project 2",
+    //   description: "A brief description of Project 2.",
+    //   img: ["/myImage.jpeg", "/myImage.jpeg", "/myImage.jpeg"],
+    //   technologies: ["JavaScript", "HTML", "CSS"],
+    //   viewLink: "artbox",
+    // },
+    // {
+    //   text: "Project 3",
+    //   description: "A brief description of Project 3.",
+    //   img: ["/myImage.jpeg", "/myImage.jpeg", "/myImage.jpeg"],
+    //   technologies: ["React", "Node.js", "SQL"],
+    //   viewLink: "artbox",
+    // },
   ];
 
   return (

@@ -5,7 +5,7 @@ import {
   Navbar,
   SomeProjects,
   Education,
-  ContactForm,
+  Footer,
 } from "~/components";
 
 export const Route = createFileRoute("/")({
@@ -20,7 +20,8 @@ function RouteComponent() {
       <About />
       <Education />
       <SomeProjects />
-      <ContactForm />
+      {/* <ContactForm /> */}
+      <Footer />
     </>
   );
 }
