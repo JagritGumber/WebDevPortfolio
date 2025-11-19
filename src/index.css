@@ -14,6 +14,46 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+    --section-padding: 3rem;
+    --hero-height: 90vh;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  :root {
+    --container-padding: 3rem;
+    --section-padding: 4.5rem;
+    --hero-height: 87vh;
+  }
+}
+
+@media (min-width: 1201px) {
+  :root {
+    --container-padding: 4rem;
+    --section-padding: 6rem;
+    --hero-height: 87vh;
+  }
+}
+
+/* Global overflow fixes */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 320px;
+}
+
+body {
+  position: relative;
+}
+
 *,
 ::after,
 ::before {

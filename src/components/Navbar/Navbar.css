@@ -25,3 +25,65 @@
   cursor: pointer;
   user-select: none;
 }
+
+/* Mobile hamburger menu button (hidden by default) */
+#navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+#navbar .hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  margin: 2px 0;
+  transition: 0.3s;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #navbar {
+    padding: 2vh 4vw;
+    position: relative;
+  }
+
+  #navbar > .name {
+    font-size: 1.5rem;
+  }
+
+  #navbar > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: inherit;
+    flex-direction: column;
+    padding: 2rem 4vw;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  #navbar > ul.active {
+    display: flex;
+  }
+
+  #navbar .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  #navbar > ul {
+    font-size: 1.4rem;
+    gap: 3vw;
+  }
+
+  #navbar > .name {
+    font-size: 1.8rem;
+  }
+}

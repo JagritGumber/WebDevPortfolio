@@ -1,9 +1,12 @@
 #someprojects {
   background: linear-gradient(#d9d9d9, transparent);
-  padding: 4rem;
+  padding: var(--section-padding) var(--container-padding);
   display: flex;
   flex-flow: column;
   gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 #someprojects .project-card-root {
@@ -83,4 +86,139 @@
   color: white;
   font-weight: bold;
   border: 2px solid black;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  #someprojects {
+    padding: var(--section-padding) 1rem;
+    gap: 1.5rem;
+  }
+
+  #someprojects .project-card-root {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  #someprojects .project-card-root:nth-child(even) {
+    flex-flow: column;
+  }
+
+  #someprojects .project-card-root>.project-card-text {
+    font-size: 1rem;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  #someprojects .project-card-root .project-card-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #someprojects .project-card-root .project-card-image .swiper {
+    height: 250px;
+    flex-basis: auto;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #someprojects .project-card-root h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  #someprojects .project-card-root p {
+    margin-bottom: 0.8rem;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .swiper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    height: 150px;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .swiper-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .technology-chips {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    width: 100%;
+  }
+
+  .technology-chip {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .technology-icon {
+    font-size: 1.4rem;
+  }
+
+  #someprojects .live-demo-button {
+    padding: 0.8rem 1.5rem;
+    margin: 0.8rem auto;
+    font-size: 1rem;
+    width: auto;
+    text-align: center;
+  }
+}
+
+/* Responsive styles for medium screens */
+@media (min-width: 769px) and (max-width: 1200px) {
+  #someprojects {
+    padding: var(--section-padding) var(--container-padding);
+    gap: 1.8rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #someprojects .project-card-root {
+    gap: 3rem;
+    padding: 1.8rem 3rem;
+    margin-bottom: 1.8rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #someprojects .project-card-root .project-card-image .swiper {
+    height: 320px;
+  }
+
+  #someprojects .project-card-root h3 {
+    font-size: 1.4rem;
+  }
+
+  .swiper-slide {
+    height: 190px;
+    margin-right: -45px;
+  }
 }

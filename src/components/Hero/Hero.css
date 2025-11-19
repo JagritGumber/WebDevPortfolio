@@ -5,7 +5,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   width: 100%;
-  height: 87vh;
+  height: var(--hero-height);
   overflow: hidden;
 }
 
@@ -74,4 +74,93 @@
   padding: 0 0 3vh 3vw;
   font-size: 8rem;
   user-select: none;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  #hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    height: auto;
+    min-height: var(--hero-height);
+    padding: var(--container-padding);
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #hero>.content {
+    grid-area: auto;
+    gap: 1rem;
+    order: 1;
+  }
+
+  #hero>.content>.normal {
+    font-size: 1.5rem;
+  }
+
+  #hero>.content>.strong {
+    font-size: 2.5rem;
+  }
+
+  #hero>.content>.light {
+    font-size: 1.2rem;
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  #hero>.content>button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  #hero>.socials {
+    grid-area: auto;
+    order: 2;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  #hero>.indicator {
+    grid-area: auto;
+    order: 3;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #hero>.pg-number {
+    grid-area: auto;
+    order: 4;
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+/* Responsive styles for tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #hero>.content>.normal {
+    font-size: 2.5rem;
+  }
+
+  #hero>.content>.strong {
+    font-size: 4rem;
+  }
+
+  #hero>.content>.light {
+    font-size: 2.2rem;
+  }
+
+  #hero>.pg-number {
+    font-size: 6rem;
+  }
 }
