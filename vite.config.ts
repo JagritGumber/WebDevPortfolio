@@ -1,10 +1,23 @@
+import path from "node:path";
+import { cloudflare } from "@cloudflare/vite-plugin";
+import react from "@vitejs/plugin-react";
+import UnoCSS from "unocss/vite";
 import { defineConfig } from "vite";
-import tsConfigPaths from "vite-tsconfig-paths";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [tsConfigPaths(), tanstackStart({
-    target: "cloudflare-module"
-  })],
+  plugins: [
+    UnoCSS(),
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler"]],
+      },
+    }),
+    cloudflare(),
+  ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });

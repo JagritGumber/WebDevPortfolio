@@ -1,19 +1,11 @@
 import "./Hero.css";
-import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
-import { TfiAngleDown } from "react-icons/tfi";
-import { SocialIcon, AnimatedText } from "../Micros";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { TfiAngleDown } from "react-icons/tfi";
 import { Particles } from "..";
-import { useAppDispatch } from "../../state";
-import { useEffect } from "react";
-import { initParticles } from "../../state/features";
+import { AnimatedText, SocialIcon } from "../Micros";
 
 export default function Hero() {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(initParticles());
-  }, [dispatch]);
   const contents = [
     "Hi, I'm a",
     "Web Developer",
@@ -38,7 +30,7 @@ export default function Hero() {
   ];
 
   return (
-    <>
+    <div className="bg-background">
       <main id="hero">
         <div className="socials">
           {icons.map((icon, index) => (
@@ -139,7 +131,6 @@ export default function Hero() {
           </motion.button>
         </div>
       </main>
-      <Particles />
-    </>
+    </div>
   );
 }

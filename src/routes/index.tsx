@@ -1,27 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
-import {
-  About,
-  Hero,
-  Navbar,
-  SomeProjects,
-  Education,
-  Footer,
-} from "~/components";
+import { Header, Hero, Profile } from "@/components";
 
-export const Route = createFileRoute("/")({
-  component: RouteComponent,
-});
-
-function RouteComponent() {
+export const Home = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <SomeProjects />
-      {/* <ContactForm /> */}
-      <Footer />
+      <Header />
+      <main className="py-4 mx-auto max-w-4xl h-[200vh]">
+        <Hero />
+        <Profile />
+      </main>
     </>
   );
-}
+};
