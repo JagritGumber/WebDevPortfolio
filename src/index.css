@@ -7,6 +7,9 @@
   -moz-osx-font-smoothing: grayscale;
 
   --background: oklch(22.324% 0.00154 16.369);
+  --muted-background: oklch(26.886% 0.00598 17.251);
+  --secondary: oklch(58.279% 0.065 147.528);
+  --secondary-foreground: oklch(86.663% 0.01557 145.734);
   --border: oklch(39.709% 0.00403 16.71);
   --primary: oklch(63.936% 0.0625 197.134);
   --primary-foreground: oklch(86.832% 0.01056 174.76);

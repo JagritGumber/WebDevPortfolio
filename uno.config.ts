@@ -7,11 +7,13 @@ export default defineConfig({
         reset: true,
         property: false,
       },
+      dark: "class",
     }),
     presetWebFonts({
       provider: "google",
       fonts: {
         handwriting: "Style Script",
+        sans: "Poppins",
       },
     }),
     presetIcons(),
@@ -26,6 +28,7 @@ export default defineConfig({
       "primary-foreground": "var(--primary-foreground)",
       "secondary-foreground": "var(--secondary-foreground)",
       "muted-foreground": "var(--muted-foreground)",
+      "muted-background": "var(--muted-background)",
     },
   },
 });
