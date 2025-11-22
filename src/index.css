@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-
 :root {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
-
   color-scheme: light dark;
 
   font-synthesis: none;
@@ -11,9 +6,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background: oklch(23.435% 0.01588 18.258);
-  --secondary: oklch(29.313% 0.02106 18.341);
-  --border: oklch(39.741% 0.0193 17.867);
+  --background: oklch(22.324% 0.00154 16.369);
+  --border: oklch(39.709% 0.00403 16.71);
+  --primary: oklch(63.936% 0.0625 197.134);
+  --primary-foreground: oklch(86.832% 0.01056 174.76);
+  --foreground: oklch(89.036% 0.01087 76.465);
+  --muted-foreground: oklch(68.887% 0.01035 41.521);
 }
 
 .light,

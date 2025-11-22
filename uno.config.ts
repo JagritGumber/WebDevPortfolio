@@ -1,5 +1,4 @@
-import presetWind4 from "@unocss/preset-wind4";
-import { defineConfig } from "unocss";
+import { defineConfig, presetIcons, presetWebFonts, presetWind4 } from "unocss";
 
 export default defineConfig({
   presets: [
@@ -9,6 +8,24 @@ export default defineConfig({
         property: false,
       },
     }),
+    presetWebFonts({
+      provider: "google",
+      fonts: {
+        handwriting: "Style Script",
+      },
+    }),
+    presetIcons(),
   ],
-  rules: [["border-border", { "border-color": "var(--border)" }]],
+  theme: {
+    colors: {
+      background: "var(--background)",
+      primary: "var(--primary)",
+      border: "var(--border)",
+      foreground: "var(--foreground)",
+      secondary: "var(--secondary)",
+      "primary-foreground": "var(--primary-foreground)",
+      "secondary-foreground": "var(--secondary-foreground)",
+      "muted-foreground": "var(--muted-foreground)",
+    },
+  },
 });
