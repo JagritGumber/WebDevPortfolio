@@ -1,4 +1,5 @@
 import { About } from "@/components/about";
+import { Connect } from "@/components/connect";
 import { Contributions } from "@/components/contributions";
 import { Experience } from "@/components/experience";
 import { Header } from "@/components/header";
@@ -11,7 +12,7 @@ export const Home = () => {
   return (
     <>
       <Header />
-      <main className="p-4 lg:px-0 mx-auto max-w-4xl h-[200vh] relative flex flex-col gap-4">
+      <main className="p-4 lg:px-0 mx-auto max-w-4xl relative flex flex-col gap-4">
         <Hero />
         <Separator />
         <Profile />
@@ -23,6 +24,8 @@ export const Home = () => {
         <Skills />
         <Separator />
         <Contributions />
+        <Separator />
+        <Connect />
         <Separator />
       </main>
     </>

@@ -1,27 +1,5 @@
+import { socials } from "@/data/socials";
 import { cn } from "@/lib/utils";
-
-const socialItems = [
-  {
-    name: "GitHub",
-    icon: "i-simple-icons:github",
-    link: "https://github.com/JagritGumber",
-  },
-  {
-    name: "X (Formerly Twitter)",
-    icon: "i-simple-icons:x",
-    link: "https://x.com/Jagrit_Gumber",
-  },
-  {
-    name: "Mail",
-    icon: "i-simple-icons:gmail",
-    link: "mailto:gumberjagrit@gmail.com",
-  },
-  {
-    name: "LinkedIn",
-    icon: "i-simple-icons:linkedin",
-    link: "https://www.linkedin.com/in/jagrit-gumber-2841a52a9",
-  },
-] as const;
 
 export const Profile = () => {
   return (
@@ -49,7 +27,7 @@ export const Profile = () => {
       <div className="ml-auto justify-between flex flex-col gap-4">
         <OpenToWorkBadge className="hidden sm:flex" />
         <div className="flex gap-4">
-          {socialItems.map(({ name, link, icon }, idx) => (
+          {socials.map(({ name, link, icon }, idx) => (
             <a
               href={link}
               target={link.startsWith("mailto:") ? undefined : "_blank"}

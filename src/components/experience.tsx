@@ -9,8 +9,22 @@ const experienceRows = [
     imgClassName: "-translate-x-[1px] -translate-y-[3px]",
     start: "2024",
     end: "Present",
-    description:
-      "Building end to end solutions for clients and internal projects.",
+    description: (
+      <div className="ml-24 text-foreground text-md flex flex-col gap-4">
+        <p>
+          Building some pretty crazy stuff. Interesting workplace, unlike most
+          other workplaces where Backend people understand Frontend. It was a
+          reverse and oh boy it's interesting.
+        </p>
+        <p>
+          Some of the things I built include:{" "}
+          <span className="text-primary">Load Balancer</span> for handling
+          multiple users stream connections along with a lot of Generative AI.
+          Was it Interesting? A lot. And this is just one of the many crazy
+          things I built that I can disclose without messing up my terms.
+        </p>
+      </div>
+    ),
   },
 ];
 
@@ -18,6 +32,7 @@ export const Experience = () => {
   return (
     <section aria-label="Experience" className="flex flex-col px-4">
       <h2 className="font-handwriting text-3xl text-foreground">Experience</h2>
+      <span className="text-muted-foreground mb-4">What I work on</span>
       {experienceRows.map((exp) => {
         return (
           <div key={exp.src} className="py-4">
@@ -43,12 +58,12 @@ export const Experience = () => {
                 </span>
               </div>
               <div className="ml-auto">
-                <span>
+                <span className="text-foreground">
                   {exp.start} - {exp.end}
                 </span>
               </div>
             </div>
-            <p className="ml-24">{exp.description}</p>
+            {exp.description}
           </div>
         );
       })}

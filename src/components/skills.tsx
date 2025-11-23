@@ -185,10 +185,13 @@ const skillRows = [
 
 export const Skills = () => {
   return (
-    <section aria-label="Skills" className="flex flex-col gap-4 px-4">
+    <section aria-label="Skills" className="flex flex-col px-4">
       <h2 className="font-handwriting text-3xl text-foreground">
         Technologies I use
       </h2>
+      <span className="text-muted-foreground mb-4">
+        These've helped me through the highs and lows of my complex projects.
+      </span>
       <SkillsScroller />
     </section>
   );
