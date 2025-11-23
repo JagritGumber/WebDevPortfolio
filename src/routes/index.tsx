@@ -1,4 +1,5 @@
 import { About } from "@/components/about";
+import { Contributions } from "@/components/contributions";
 import { Experience } from "@/components/experience";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
@@ -20,6 +21,8 @@ export const Home = () => {
         <Experience />
         <Separator />
         <Skills />
+        <Separator />
+        <Contributions />
         <Separator />
       </main>
     </>
