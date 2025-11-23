@@ -49,7 +49,7 @@ export function Header() {
           },
         )}
       >
-        <span className="text-3xl font-handwriting text-foreground">
+        <span className="text-2xl font-handwriting text-foreground">
           Jagrit
         </span>
         <div className="hidden items-center gap-2 md:flex">

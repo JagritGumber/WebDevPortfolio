@@ -38,10 +38,10 @@ export const Profile = () => {
         <OpenToWorkBadge className="sm:hidden" />
       </div>
 
-      <div className="flex flex-col gap-2 py-2">
-        <span className="text-4xl font-handwriting text-foreground flex gap-2">
+      <div className="flex flex-col py-2">
+        <h1 className="text-4xl font-handwriting text-foreground flex gap-2">
           Jagrit Gumber <span className="i-bxs:badge-check text-primary" />
-        </span>
+        </h1>
         <span className="text-md text-muted-foreground">
           20 - Full Stack Engineer - Polyglot
         </span>
@@ -74,7 +74,7 @@ const OpenToWorkBadge = ({
   return (
     <div
       className={cn(
-        "bg-muted-background ml-auto rounded-full w-fit h-fit mb-auto px-4 py-2 border border-border flex gap-3 items-center",
+        "bg-muted-background ml-auto rounded-full text-sm w-fit h-fit mb-auto px-4 py-2 border border-border flex gap-3 items-center",
         className,
       )}
       {...props}

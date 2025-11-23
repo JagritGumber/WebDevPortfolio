@@ -2,6 +2,7 @@ import { About } from "@/components/about";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Profile } from "@/components/profile";
+import { Skills } from "@/components/skills";
 import { Separator } from "@/components/ui/separator";
 
 export const Home = () => {
@@ -14,6 +15,8 @@ export const Home = () => {
         <Profile />
         <Separator />
         <About />
+        <Separator />
+        <Skills />
         <Separator />
       </main>
     </>
