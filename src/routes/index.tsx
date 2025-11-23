@@ -12,7 +12,7 @@ import { Separator } from "@/components/ui/separator";
 
 export const Home = () => {
   return (
-    <>
+    <div className="bg-background">
       <Header />
       <main className="mx-auto max-w-4xl relative flex flex-col">
         <Hero />
@@ -33,6 +33,6 @@ export const Home = () => {
         <Separator />
         <Footer />
       </main>
-    </>
+    </div>
   );
 };

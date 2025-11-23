@@ -6,6 +6,40 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --border: oklch(73.152% 0.01748 17.299);
+  --background: oklch(93.296% 0.01074 76.461);
+  --muted-background: oklch(89.521% 0.01225 42.92);
+  --foreground: oklch(22.324% 0.00154 16.369);
+  --muted-foreground: oklch(47.915% 0.02764 48.049);
+  --secondary: oklch(63.516% 0.13619 145.709);
+  --secondary-foreground: oklch(92.268% 0.02386 145.583);
+  --primary: oklch(60.231% 0.07571 196.53);
+  --primary-foreground: oklch(90.923% 0.01734 174.359);
+  --accent: oklch(46.456% 0.1085 356.158);
+  --accent-foreground: oklch(89.26% 0.03012 327.359);
+  --tertiary: oklch(65.429% 0.10875 96.277);
+  --tertiary-foreground: oklch(91.925% 0.02448 119.641);
+}
+
+.light,
+[data-theme="light"] {
+  --border: oklch(73.152% 0.01748 17.299);
+  --background: oklch(93.296% 0.01074 76.461);
+  --muted-background: oklch(89.521% 0.01225 42.92);
+  --foreground: oklch(22.324% 0.00154 16.369);
+  --muted-foreground: oklch(26.886% 0.00598 17.251);
+  --secondary: oklch(63.516% 0.13619 145.709);
+  --secondary-foreground: oklch(92.268% 0.02386 145.583);
+  --primary: oklch(60.231% 0.07571 196.53);
+  --primary-foreground: oklch(90.923% 0.01734 174.359);
+  --accent: oklch(46.456% 0.1085 356.158);
+  --accent-foreground: oklch(89.26% 0.03012 327.359);
+  --tertiary: oklch(65.429% 0.10875 96.277);
+  --tertiary-foreground: oklch(91.925% 0.02448 119.641);
+}
+
+.dark,
+[data-theme="dark"] {
   --border: oklch(39.709% 0.00403 16.71);
   --background: oklch(22.324% 0.00154 16.369);
   --muted-background: oklch(26.886% 0.00598 17.251);
@@ -19,17 +53,4 @@
   --accent-foreground: oklch(89.26% 0.03012 327.359);
   --tertiary: oklch(65.429% 0.10875 96.277);
   --tertiary-foreground: oklch(91.925% 0.02448 119.641);
-}
-
-.light,
-[data-theme="light"] {
-  --background: oklch(19.125% 0.00002 271.152);
-  --secondary: oklch(0.2393 0 0);
-  --border: oklch(60.999% 0.00007 271.152);
-}
-
-.dark,
-[data-theme="light"] {
-  --background: oklch(0.1704 0.0087 21.18);
-  --border: oklch(55.1% 0.027 264.364);
 }

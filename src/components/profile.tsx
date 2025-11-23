@@ -58,7 +58,7 @@ export const Profile = () => {
               key={idx}
               aria-label={name}
             >
-              <div className={cn(icon, "size-6")} />
+              <div className={cn(icon, "size-6 text-foreground")} />
             </a>
           ))}
         </div>
@@ -74,7 +74,7 @@ const OpenToWorkBadge = ({
   return (
     <div
       className={cn(
-        "bg-muted-background ml-auto rounded-full text-sm w-fit h-fit mb-auto px-4 py-2 border border-border flex gap-3 items-center",
+        "bg-muted-background ml-auto rounded-full text-sm w-fit h-fit mb-auto px-4 py-2 border border-border flex gap-3 items-center text-foreground",
         className,
       )}
       {...props}

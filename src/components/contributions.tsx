@@ -12,10 +12,11 @@ export const Contributions = () => {
           blockMargin={3}
           style={{
             overflow: "scroll",
+            color: "var(--foreground)",
           }}
           blockSize={12}
           theme={{
-            light: ["hsl(0, 0%, 92%)", "firebrick"],
+            light: ["var(--muted-background)", "var(--secondary)"],
             dark: ["var(--muted-background)", "var(--secondary)"],
           }}
         />

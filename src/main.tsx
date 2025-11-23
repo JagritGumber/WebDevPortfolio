@@ -11,8 +11,6 @@ if (!root) {
   throw new Error("No root element found");
 }
 
-root.classList.add("bg-background");
-
 createRoot(root).render(
   <StrictMode>
     <Home />

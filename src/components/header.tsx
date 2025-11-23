@@ -33,7 +33,7 @@ export function Header() {
       className={cn(
         "sticky top-0 z-50 mx-auto max-w-6xl w-full border-b border-transparent md:rounded-full md:border md:transition-all md:duration-300 md:ease-out",
         {
-          "bg-background/95 backdrop-blur-md border-border md:top-4 md:max-w-3xl md:shadow":
+          "bg-background/90 backdrop-blur-md border-border md:top-4 md:max-w-3xl md:shadow":
             scrolled && !open,
           "bg-background/90": open,
         },

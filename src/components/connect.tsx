@@ -42,7 +42,7 @@ export const Connect = () => {
             key={idx}
             aria-label={name}
           >
-            <div className={cn(icon, "size-6")} />
+            <div className={cn(icon, "size-6 text-foreground")} />
           </a>
         ))}
       </div>
