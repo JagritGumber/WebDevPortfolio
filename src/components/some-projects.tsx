@@ -4,14 +4,14 @@ import { buttonVariants } from "./ui/button";
 
 export const SomeProjects = () => {
   return (
-    <section aria-label="Some Projects" className="px-4 flex flex-col">
+    <section aria-label="Some Projects" className="p-4 md:p-8 flex flex-col">
       <h2 className="font-serif text-3xl text-foreground">
         Some Cool Projects
       </h2>
       <span className="text-muted-foreground mb-4">
         I've more cool things in store these are just a few
       </span>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {projects.slice(0, 3).map((project, idx) => (
           <div
             // biome-ignore lint/suspicious/noArrayIndexKey: Static list

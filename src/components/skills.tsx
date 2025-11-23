@@ -185,7 +185,7 @@ const skillRows = [
 
 export const Skills = () => {
   return (
-    <section aria-label="Skills" className="flex flex-col px-4">
+    <section aria-label="Skills" className="flex flex-col p-4 md:p-8">
       <h2 className="font-handwriting text-3xl text-foreground">
         Technologies I use
       </h2>
@@ -208,9 +208,10 @@ const SkillsScroller = () => {
             rIdx % 2 === 0 ? "animate-marquee" : "animate-marquee-reverse",
           )}
         >
-          {[...row.items, ...row.items].map((item) => (
+          {[...row.items, ...row.items].map((item, idx) => (
             <div
-              key={item.name}
+              // biome-ignore lint/suspicious/noArrayIndexKey: Static list
+              key={idx}
               className={cn(
                 "flex gap-2 items-center justify-center px-4 py-2",
                 "text-foreground bg-background border-border border",

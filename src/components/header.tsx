@@ -53,7 +53,7 @@ export function Header() {
           Jagrit
         </span>
         <div className="hidden items-center gap-2 md:flex">
-          {links.map((link, i) => (
+          {/* {links.map((link, i) => (
             <a
               // biome-ignore lint/suspicious/noArrayIndexKey: The array is a static list of elements
               key={i}
@@ -62,20 +62,20 @@ export function Header() {
             >
               {link.label}
             </a>
-          ))}
+          ))} */}
           {/* <Button variant="outline">Sign In</Button> */}
         </div>
-        <Button
+        {/* <Button
           size="icon"
           variant="outline"
           onClick={() => setOpen(!open)}
           className="md:hidden"
         >
           <MenuToggleIcon open={open} className="size-5" duration={300} />
-        </Button>
+        </Button> */}
       </nav>
 
-      <div
+      {/* <div
         className={cn(
           "bg-background/90 fixed top-14 right-0 bottom-0 left-0 z-50 flex flex-col overflow-hidden border-y md:hidden",
           open ? "block" : "hidden",
@@ -103,14 +103,8 @@ export function Header() {
               </a>
             ))}
           </div>
-          <div className="flex flex-col gap-2">
-            {/* <Button variant="outline" className="w-full">
-              Sign In
-            </Button>
-            <Button className="w-full text-nowrap">Get Started</Button> */}
-          </div>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }

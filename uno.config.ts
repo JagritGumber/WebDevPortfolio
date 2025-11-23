@@ -10,6 +10,10 @@ export default defineConfig({
       },
       dark: "class",
     }),
+    presetIcons({
+      autoInstall: true,
+      iconifyCollectionsNames: ["simple-icons", "bxs"],
+    }),
     presetWebFonts({
       provider: "google",
       fonts: {
@@ -18,7 +22,6 @@ export default defineConfig({
         serif: "Ovo",
       },
     }),
-    presetIcons(),
     presetAnimations(),
   ],
   theme: {

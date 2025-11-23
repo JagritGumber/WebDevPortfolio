@@ -2,7 +2,7 @@ export const About = () => {
   return (
     <section
       aria-label="About Jagrit Gumber"
-      className="gap-3 flex flex-col font-sans text-foreground text-md px-4"
+      className="gap-3 flex flex-col font-sans text-foreground text-md p-4 lg:p-8"
     >
       <p>Hi, I'm Jagrit Gumber,</p>
       <p>

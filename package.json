@@ -24,7 +24,6 @@
     "@cloudflare/vite-plugin": "^1.15.2",
     "@eslint/js": "^9.39.1",
     "@iconify-json/bxs": "^1.2.2",
-    "@iconify-json/ci": "^1.2.2",
     "@iconify-json/simple-icons": "^1.2.59",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",

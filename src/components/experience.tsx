@@ -10,7 +10,7 @@ const experienceRows = [
     start: "2024",
     end: "Present",
     description: (
-      <div className="ml-24 text-foreground text-md flex flex-col gap-4">
+      <>
         <p>
           Building some pretty crazy stuff. Interesting workplace, unlike most
           other workplaces where Backend people understand Frontend. It was a
@@ -23,20 +23,20 @@ const experienceRows = [
           Was it Interesting? A lot. And this is just one of the many crazy
           things I built that I can disclose without messing up my terms.
         </p>
-      </div>
+      </>
     ),
   },
 ];
 
 export const Experience = () => {
   return (
-    <section aria-label="Experience" className="flex flex-col px-4">
+    <section aria-label="Experience" className="flex flex-col p-4 lg:p-8">
       <h2 className="font-handwriting text-3xl text-foreground">Experience</h2>
       <span className="text-muted-foreground mb-4">What I work on</span>
       {experienceRows.map((exp) => {
         return (
-          <div key={exp.src} className="py-4">
-            <div className={cn("px-4 flex gap-4 items-topline")}>
+          <div key={exp.src} className="py-4 relative">
+            <div className={cn("md:px-4 flex flex-col gap-4 items-topline")}>
               <div
                 className={cn(
                   exp.contClassName,
@@ -57,13 +57,15 @@ export const Experience = () => {
                   {exp.role}
                 </span>
               </div>
-              <div className="ml-auto">
+              <div className="absolute top-4 right-0 md:ml-auto">
                 <span className="text-foreground">
                   {exp.start} - {exp.end}
                 </span>
               </div>
             </div>
-            {exp.description}
+            <div className="pt-4 md:pt-0 md:ml-24 text-foreground text-md flex flex-col gap-4">
+              {exp.description}
+            </div>
           </div>
         );
       })}

@@ -36,6 +36,7 @@ export function MenuToggleIcon({
       }}
       {...props}
     >
+      <title>Animated Hamburger X Toggle</title>
       <path
         className={clsx(
           "transition-all ease-in-out",
