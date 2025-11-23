@@ -36,7 +36,7 @@ export const Experience = () => {
       {experienceRows.map((exp) => {
         return (
           <div key={exp.src} className="py-4 relative">
-            <div className={cn("md:px-4 flex flex-col gap-4 items-topline")}>
+            <div className={cn("lg:px-4 flex flex-col gap-4 items-topline")}>
               <div
                 className={cn(
                   exp.contClassName,
@@ -63,7 +63,7 @@ export const Experience = () => {
                 </span>
               </div>
             </div>
-            <div className="pt-4 md:pt-0 md:ml-24 text-foreground text-md flex flex-col gap-4">
+            <div className="pt-4 lg:pt-0 lg:m-4 text-foreground text-md flex flex-col gap-4">
               {exp.description}
             </div>
           </div>

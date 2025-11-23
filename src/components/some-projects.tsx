@@ -4,7 +4,7 @@ import { buttonVariants } from "./ui/button";
 
 export const SomeProjects = () => {
   return (
-    <section aria-label="Some Projects" className="p-4 md:p-8 flex flex-col">
+    <section aria-label="Some Projects" className="p-4 lg:p-8 flex flex-col">
       <h2 className="font-serif text-3xl text-foreground">
         Some Cool Projects
       </h2>

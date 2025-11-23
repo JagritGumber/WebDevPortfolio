@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { MenuToggleIcon } from "@/components/ui/menu-toggle-icon";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
 
 export function Header() {
-  const [open, setOpen] = useState(false);
+  const [open] = useState(false);
   const scrolled = useScroll(10);
 
-  const links = [
-    {
-      label: "Projects",
-      href: "#",
-    },
-  ] as const;
+  // const links = [
+  //   {
+  //     label: "Projects",
+  //     href: "#",
+  //   },
+  // ] as const;
 
   useEffect(() => {
     if (open) {
