@@ -1,11 +1,8 @@
 "$schema" = "node_modules/wrangler/config-schema.json"
 name = "jagrit-gumber-portfolio"
 compatibility_date = "2025-06-27"
-compatibility_flags = [ "nodejs_compat" ]
 
 [assets]
-directory = ".output/public"
-binding = "ASSETS"
 not_found_handling ="single-page-application"
 
 [observability]
