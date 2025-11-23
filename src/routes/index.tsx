@@ -1,4 +1,5 @@
 import { About } from "@/components/about";
+import { Experience } from "@/components/experience";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Profile } from "@/components/profile";
@@ -15,6 +16,8 @@ export const Home = () => {
         <Profile />
         <Separator />
         <About />
+        <Separator />
+        <Experience />
         <Separator />
         <Skills />
         <Separator />

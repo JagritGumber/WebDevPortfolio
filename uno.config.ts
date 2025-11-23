@@ -15,6 +15,7 @@ export default defineConfig({
       fonts: {
         handwriting: "Ovo",
         sans: "Poppins",
+        serif: "Ovo",
       },
     }),
     presetIcons(),

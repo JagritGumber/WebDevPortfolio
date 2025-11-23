@@ -185,7 +185,7 @@ const skillRows = [
 
 export const Skills = () => {
   return (
-    <section aria-label="Skills" className="flex flex-col gap-4 py-2">
+    <section aria-label="Skills" className="flex flex-col gap-4 px-4">
       <h2 className="font-handwriting text-3xl text-foreground">
         Technologies I use
       </h2>

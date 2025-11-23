@@ -27,7 +27,7 @@ export const Profile = () => {
   return (
     <section
       aria-label="Profile Section"
-      className="flex flex-col sm:flex-row gap-4 relative"
+      className="flex flex-col sm:flex-row gap-4 relative px-4"
     >
       <div className="flex justify-between sm:contents">
         <img
