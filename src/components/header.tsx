@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
+import { ThemeToggleButton } from "./theme-toggle-button";
 
 export function Header() {
   const [open] = useState(false);
@@ -50,27 +51,7 @@ export function Header() {
         <span className="text-2xl font-handwriting text-foreground">
           Jagrit
         </span>
-        <div className="hidden items-center gap-2 md:flex">
-          {/* {links.map((link, i) => (
-            <a
-              // biome-ignore lint/suspicious/noArrayIndexKey: The array is a static list of elements
-              key={i}
-              className={buttonVariants({ variant: "link" })}
-              href={link.href}
-            >
-              {link.label}
-            </a>
-          ))} */}
-          {/* <Button variant="outline">Sign In</Button> */}
-        </div>
-        {/* <Button
-          size="icon"
-          variant="outline"
-          onClick={() => setOpen(!open)}
-          className="md:hidden"
-        >
-          <MenuToggleIcon open={open} className="size-5" duration={300} />
-        </Button> */}
+        <ThemeToggleButton />
       </nav>
 
       {/* <div

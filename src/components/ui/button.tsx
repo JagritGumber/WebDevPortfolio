@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 export const buttonVariants = cva(
-  "rounded-full hover:border-white/50 hover:text-white transition-colors duration-200 w-fit sm:w-auto text-nowrap",
+  "rounded-full hover:border-white/50 hover:text-white transition-colors duration-200 sm:w-auto text-nowrap",
   {
     variants: {
       variant: {
@@ -20,7 +20,7 @@ export const buttonVariants = cva(
         default: "px-4 py-2 sm:px-3 text-xs sm:text-sm",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-full px-8 text-lg",
-        icon: "h-10 w-10 flex items-center justify-center",
+        icon: "h-10 w-10 flex items-center justify-center aspect-square",
       },
     },
     defaultVariants: {

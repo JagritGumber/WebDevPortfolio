@@ -6,9 +6,19 @@ import "virtual:uno.css";
 
 const root = document.getElementById("root");
 
+const prefersDarkMode = window.matchMedia(
+  "(prefers-color-scheme: dark)",
+).matches;
+
 if (!root) {
   console.error("No root element found can't continue");
   throw new Error("No root element found");
+}
+
+if (prefersDarkMode) {
+  root.setAttribute("data-theme", "dark");
+} else {
+  root.setAttribute("data-theme", "light");
 }
 
 createRoot(root).render(
