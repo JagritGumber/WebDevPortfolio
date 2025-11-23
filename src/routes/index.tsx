@@ -6,6 +6,7 @@ import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { Profile } from "@/components/profile";
 import { Skills } from "@/components/skills";
+import { SomeProjects } from "@/components/some-projects";
 import { Separator } from "@/components/ui/separator";
 
 export const Home = () => {
@@ -22,6 +23,8 @@ export const Home = () => {
         <Experience />
         <Separator />
         <Skills />
+        <Separator />
+        <SomeProjects />
         <Separator />
         <Contributions />
         <Separator />
