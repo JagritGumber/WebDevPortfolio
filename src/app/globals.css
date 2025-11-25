@@ -102,8 +102,27 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 body:has(dialog[open]) {
   overflow: hidden;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
+}
+
+::view-transition-old(root) {
+  z-index: 2;
+  animation: wipeRight 0.5s ease-in-out;
+}
+
+@keyframes wipeRight {
+  from {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+  to {
+    clip-path: polygon(0% 0%, 0% 100%, 0% 0%, 100% 0%);
+  }
 }

@@ -10,29 +10,39 @@ export const ThemeToggleButton = () => {
 
   useEffect(() => {
     setMounted(true);
+    const storedTheme = localStorage.getItem("theme");
     const currentTheme =
-      document.body?.getAttribute("data-theme") ??
+      storedTheme ||
       (window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light");
     setTheme(currentTheme);
-    document.body?.setAttribute("data-theme", currentTheme);
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    if (!storedTheme) {
+      localStorage.setItem("theme", currentTheme);
+    }
   }, []);
 
   const toggleTheme = () => {
-    const root = document.body;
-    if (!root) {
+    const html = document.documentElement;
+    if (!html) {
       return;
     }
-    const currentTheme = root.getAttribute("data-theme");
+    const currentTheme = html.getAttribute("data-theme") || "light";
+    const newTheme = currentTheme === "light" ? "dark" : "light";
 
-    if (currentTheme === "light") {
-      root.setAttribute("data-theme", "dark");
-      setTheme("dark");
-    } else {
-      root.setAttribute("data-theme", "light");
-      setTheme("light");
+    if (!document.startViewTransition) {
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      setTheme(newTheme);
+      return;
     }
+
+    const transition = document.startViewTransition(() => {
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      setTheme(newTheme);
+    });
   };
 
   if (!mounted) {
@@ -42,7 +52,7 @@ export const ThemeToggleButton = () => {
         variant={"outline"}
         className="p-2 text-foreground aspect-square hover:bg-primary"
       >
-        <Icon icon="bxs:moon" className="size-6" />
+        <Icon icon="bxs:sun" className="size-6" />
       </Button>
     );
   }
@@ -54,9 +64,9 @@ export const ThemeToggleButton = () => {
       className="p-2 text-foreground aspect-square hover:bg-primary"
       onClick={toggleTheme}
     >
-      <Icon 
-        icon={theme === "light" ? "bxs:moon" : "bxs:sun"} 
-        className="size-6" 
+      <Icon
+        icon={theme === "light" ? "bxs:moon" : "bxs:sun"}
+        className="size-6"
       />
     </Button>
   );

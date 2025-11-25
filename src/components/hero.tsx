@@ -1,17 +1,20 @@
 import BlurhashView from "@annatarhe/blurhash-react";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <div
-      id="hero"
-      className="max-w-4xl md:m-4 lg:m-8 max-h-2xl overflow-hidden md:rounded-md"
-    >
-      <BlurhashView
-        className="w-full aspect-3/1"
-        blurhashValue="LgPs*Maf~qWr-oV@NGkCxan$WVX9"
-        src="/banner.png"
-        alt="banner-image"
-      />
+    <div className="md:p-4 lg:p-8">
+      <div className="relative max-w-4xl w-full aspect-3/1 overflow-hidden rounded-md">
+        <Image
+          src="/banner.png"
+          alt="banner-image"
+          fill
+          className="object-cover"
+          priority
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,LgPs*Maf~qWr-oV@NGkCxan$WVX9"
+        />
+      </div>
     </div>
   );
 };

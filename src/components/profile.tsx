@@ -1,6 +1,6 @@
-import BlurhashView from "@annatarhe/blurhash-react";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 const socials = [
   {
@@ -32,18 +32,21 @@ export const Profile = () => {
       className="flex flex-col sm:flex-row gap-4 relative p-4 lg:p-8"
     >
       <div className="flex justify-between sm:contents">
-        <BlurhashView
-          blurhashValue="LFNcyhD9IQiI.o0aDCW0q{D}.9??"
+        <Image
+          blurDataURL="data:image/png;base64,LFNcyhD9IQiI.o0aDCW0q{D}.9??"
           src="/profile-pic.jpg"
           alt="Jagrit Gumber"
           className="w-32 h-32 rounded-md"
+          width={128}
+          height={128}
         />
         <OpenToWorkBadge className="sm:hidden" />
       </div>
 
       <div className="flex flex-col py-2">
         <h1 className="text-4xl font-handwriting text-foreground flex gap-2">
-          Jagrit Gumber <Icon icon="bxs:badge-check" className="text-primary size-8" />
+          Jagrit Gumber{" "}
+          <Icon icon="bxs:badge-check" className="text-primary size-8" />
         </h1>
         <span className="text-md text-muted-foreground">
           20 - Full Stack Engineer - Polyglot
@@ -78,7 +81,7 @@ const OpenToWorkBadge = ({
     <div
       className={cn(
         "bg-muted-background ml-auto rounded-full text-sm w-fit h-fit mb-auto px-4 py-2 border border-border flex gap-3 items-center text-foreground",
-        className,
+        className
       )}
       {...props}
     >

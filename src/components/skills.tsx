@@ -200,13 +200,13 @@ export const Skills = () => {
 
 const SkillsScroller = () => {
   return (
-    <div className="group flex flex-col overflow-hidden py-2 max-w-full [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+    <div className="group flex flex-col overflow-hidden py-2 max-w-full mask-[linear-gradient(to_right,rgba(0,0,0,0),rgba(0,0,0,1)_10%,rgba(0,0,0,1)_90%,rgba(0,0,0,0))]">
       {skillRows.map((row, rIdx) => (
         <div
           key={row.name}
           className={cn(
             "flex flex-row w-max",
-            rIdx % 2 === 0 ? "animate-marquee" : "animate-marquee-reverse",
+            rIdx % 2 === 0 ? "animate-marquee" : "animate-marquee-reverse"
           )}
         >
           {[...row.items, ...row.items].map((item, idx) => (
@@ -215,7 +215,7 @@ const SkillsScroller = () => {
               key={idx}
               className={cn(
                 "flex gap-2 items-center justify-center px-4 py-2",
-                "text-foreground bg-background border-border border",
+                "text-foreground bg-background border-border border"
               )}
             >
               <Icon icon={item.icon} className="size-6" />
