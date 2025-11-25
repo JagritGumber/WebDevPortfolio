@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 export const ThemeToggleButton = () => {
   const [theme, setTheme] = useState(
-    document.getElementById("root")?.getAttribute("data-theme") ??
+    document.body?.getAttribute("data-theme") ??
       (window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"),
@@ -15,7 +15,7 @@ export const ThemeToggleButton = () => {
       variant={"outline"}
       className="p-2 text-foreground aspect-square hover:bg-primary"
       onClick={() => {
-        const root = document.getElementById("root");
+        const root = document.body;
         if (!root) {
           return;
         }

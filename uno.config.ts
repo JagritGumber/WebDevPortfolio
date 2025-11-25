@@ -22,7 +22,9 @@ export default defineConfig({
         serif: "Ovo",
       },
     }),
-    presetAnimations(),
+    presetAnimations({
+      delay: 0.1,
+    }),
   ],
   theme: {
     colors: {

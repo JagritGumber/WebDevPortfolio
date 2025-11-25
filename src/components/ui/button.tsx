@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 export const buttonVariants = cva(
-  "rounded-full hover:border-white/50 hover:text-white transition-colors duration-200 sm:w-auto text-nowrap",
+  "rounded-full hover:border-white/50 hover:text-white transition-colors duration-200 text-nowrap",
   {
     variants: {
       variant: {
@@ -13,7 +13,7 @@ export const buttonVariants = cva(
           "border border-border bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-muted-background hover:text-foreground",
         link: "text-primary-foreground underline-offset-4 underline",
       },
       size: {
