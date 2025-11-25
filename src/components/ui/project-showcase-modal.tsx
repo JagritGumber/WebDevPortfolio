@@ -1,4 +1,5 @@
 import { Button } from "./button";
+import { Icon } from "@iconify/react";
 
 export const ProjectShowcaseModal = ({
   open = false,
@@ -21,7 +22,7 @@ export const ProjectShowcaseModal = ({
         <div className="flex items-center justify-between">
           {title}
           <Button size={"icon"} variant={"outline"} onClick={onClose}>
-            <span className="i-bxs:x-circle" />
+            <Icon icon="bxs:x-circle" className="size-6" />
           </Button>
         </div>
 

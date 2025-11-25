@@ -1,8 +1,11 @@
+"use client"
+
 import BlurhashView from "@annatarhe/blurhash-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button, type ButtonProps, buttonVariants } from "./ui/button";
 import { ProjectShowcaseModal } from "./ui/project-showcase-modal";
+import { Icon } from "@iconify/react";
 
 const projects = [
   {
@@ -103,7 +106,7 @@ export const SomeProjects = () => {
               blurhashValue={project.imgHash}
               src={project.imgSrc}
               alt={project.name}
-              className="aspect-[16/9] cover"
+              className="aspect-video cover"
             />
             <div className="content p-4">
               <span className="text-2xl text-foreground font-serif block">
@@ -150,7 +153,7 @@ export const SomeProjects = () => {
           )}
         >
           View {projects.length - 3} more projects{" "}
-          <span className="i-bxs:right-arrow size-6" />
+          <Icon icon="bxs:right-arrow" className="size-6 inline" />
         </a>
       )}
     </section>

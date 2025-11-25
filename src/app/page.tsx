@@ -10,7 +10,7 @@ import { Skills } from "@/components/skills";
 import { SomeProjects } from "@/components/some-projects";
 import { Separator } from "@/components/ui/separator";
 
-export const Home = () => {
+const Home = () => {
   return (
     <div className="bg-background">
       <Header />
@@ -36,3 +36,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home

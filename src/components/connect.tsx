@@ -1,24 +1,24 @@
-import { cn } from "@/lib/utils";
+import { Icon } from "@iconify/react";
 
 const socials = [
   {
     name: "GitHub",
-    icon: "i-simple-icons:github",
+    icon: "simple-icons:github",
     link: "https://github.com/JagritGumber",
   },
   {
     name: "X (Formerly Twitter)",
-    icon: "i-simple-icons:x",
+    icon: "simple-icons:x",
     link: "https://x.com/Jagrit_Gumber",
   },
   {
     name: "Mail",
-    icon: "i-simple-icons:gmail",
+    icon: "simple-icons:gmail",
     link: "mailto:gumberjagrit@gmail.com",
   },
   {
     name: "LinkedIn",
-    icon: "i-simple-icons:linkedin",
+    icon: "simple-icons:linkedin",
     link: "https://www.linkedin.com/in/jagrit-gumber-2841a52a9",
   },
 ] as const;
@@ -42,7 +42,7 @@ export const Connect = () => {
             key={idx}
             aria-label={name}
           >
-            <div className={cn(icon, "size-6 text-foreground")} />
+            <Icon icon={icon} className="size-6 text-foreground" />
           </a>
         ))}
       </div>

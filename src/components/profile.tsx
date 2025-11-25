@@ -1,25 +1,26 @@
 import BlurhashView from "@annatarhe/blurhash-react";
 import { cn } from "@/lib/utils";
+import { Icon } from "@iconify/react";
 
 const socials = [
   {
     name: "GitHub",
-    icon: "i-simple-icons:github",
+    icon: "simple-icons:github",
     link: "https://github.com/JagritGumber",
   },
   {
     name: "X (Formerly Twitter)",
-    icon: "i-simple-icons:x",
+    icon: "simple-icons:x",
     link: "https://x.com/Jagrit_Gumber",
   },
   {
     name: "Mail",
-    icon: "i-simple-icons:gmail",
+    icon: "simple-icons:gmail",
     link: "mailto:gumberjagrit@gmail.com",
   },
   {
     name: "LinkedIn",
-    icon: "i-simple-icons:linkedin",
+    icon: "simple-icons:linkedin",
     link: "https://www.linkedin.com/in/jagrit-gumber-2841a52a9",
   },
 ] as const;
@@ -42,7 +43,7 @@ export const Profile = () => {
 
       <div className="flex flex-col py-2">
         <h1 className="text-4xl font-handwriting text-foreground flex gap-2">
-          Jagrit Gumber <span className="i-bxs:badge-check text-primary" />
+          Jagrit Gumber <Icon icon="bxs:badge-check" className="text-primary size-8" />
         </h1>
         <span className="text-md text-muted-foreground">
           20 - Full Stack Engineer - Polyglot
@@ -60,7 +61,7 @@ export const Profile = () => {
               key={idx}
               aria-label={name}
             >
-              <div className={cn(icon, "size-6 text-foreground")} />
+              <Icon icon={icon} className="size-6 text-foreground" />
             </a>
           ))}
         </div>
