@@ -1,9 +1,11 @@
+import BlurhashView from "@annatarhe/blurhash-react";
 import { cn } from "@/lib/utils";
 
 const experienceRows = [
   {
     companyName: "Algo One AI",
     role: "Frontend Developer",
+    hash: "LNHnmSDq~8$,[w9Q-EIv^SEJN2.6",
     src: "/algo-one-ai.png",
     contClassName: "bg-white",
     imgClassName: "-translate-x-[1px] -translate-y-[3px]",
@@ -43,7 +45,8 @@ export const Experience = () => {
                   "size-16 rounded-full flex items-center justify-center",
                 )}
               >
-                <img
+                <BlurhashView
+                  blurhashValue={exp.hash}
                   src={exp.src}
                   alt={exp.companyName}
                   className={cn(exp.imgClassName, "size-12")}

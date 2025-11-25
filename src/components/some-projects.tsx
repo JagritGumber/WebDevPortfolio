@@ -1,3 +1,4 @@
+import BlurhashView from "@annatarhe/blurhash-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button, type ButtonProps, buttonVariants } from "./ui/button";
@@ -7,6 +8,7 @@ const projects = [
   {
     name: "Particle System",
     imgSrc: "/particle-system-rs.png",
+    imgHash: "LNA^C600%Nxu^-IBxaoyM,%MM_V[",
     desc: "To learn Rust, I cooked in Rust",
     techUsed: [
       {
@@ -22,6 +24,7 @@ const projects = [
   },
   {
     name: "ArtBox",
+    imgHash: "LHK1wN00MwNL.9r;o$Ri~q?bM{tR",
     imgSrc: "/artbox.png",
     desc: "My first website in React",
     techUsed: [
@@ -52,6 +55,7 @@ const projects = [
   {
     name: "Learnysvia",
     imgSrc: "/learnysvia.png",
+    imgHash: "L3S6GLXTTw$$?vw}I:n5~p}]M{Z%",
     desc: "Full stack real time poll application",
     techUsed: [
       {
@@ -95,7 +99,8 @@ export const SomeProjects = () => {
             key={idx}
             className="flex flex-col bg-muted-background rounded-md overflow-hidden border border-border"
           >
-            <img
+            <BlurhashView
+              blurhashValue={project.imgHash}
               src={project.imgSrc}
               alt={project.name}
               className="aspect-[16/9] cover"
@@ -113,7 +118,7 @@ export const SomeProjects = () => {
               <ProjectShowcaseModalButton
                 title={<h1 className="text-3xl font-serif">{project.name}</h1>}
                 body={
-                  <div className="modal-body mt-4 flex flex-col gap-4">
+                  <div className="modal-body mt-4 flex flex-col gap-4 text-align-justify">
                     <iframe
                       width="100%"
                       className="aspect-ratio-video"

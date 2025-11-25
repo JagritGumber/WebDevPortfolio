@@ -1,3 +1,4 @@
+import BlurhashView from "@annatarhe/blurhash-react";
 import { cn } from "@/lib/utils";
 
 const socials = [
@@ -30,7 +31,8 @@ export const Profile = () => {
       className="flex flex-col sm:flex-row gap-4 relative p-4 lg:p-8"
     >
       <div className="flex justify-between sm:contents">
-        <img
+        <BlurhashView
+          blurhashValue="LFNcyhD9IQiI.o0aDCW0q{D}.9??"
           src="/profile-pic.jpg"
           alt="Jagrit Gumber"
           className="w-32 h-32 rounded-md"
