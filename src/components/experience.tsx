@@ -5,7 +5,6 @@ const experienceRows = [
   {
     companyName: "Algo One AI",
     role: "Frontend Developer",
-    hash: "LNHnmSDq~8$,[w9Q-EIv^SEJN2.6",
     src: "/algo-one-ai.png",
     contClassName: "bg-white",
     imgClassName: "-translate-x-[1px] -translate-y-[3px]",
@@ -42,11 +41,10 @@ export const Experience = () => {
               <div
                 className={cn(
                   exp.contClassName,
-                  "size-16 rounded-full flex items-center justify-center",
+                  "size-16 rounded-full flex items-center justify-center"
                 )}
               >
-                <BlurhashView
-                  blurhashValue={exp.hash}
+                <img
                   src={exp.src}
                   alt={exp.companyName}
                   className={cn(exp.imgClassName, "size-12")}
