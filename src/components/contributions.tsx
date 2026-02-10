@@ -11,7 +11,7 @@ export const Contributions = () => {
           colorScheme="dark"
           blockMargin={3}
           style={{
-            overflow: "scroll",
+            overflow: "auto",
             color: "var(--foreground)",
           }}
           blockSize={12}
