@@ -1,9 +1,15 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useScroll } from "@/hooks/use-scroll";
 import { cn } from "@/lib/utils";
 import { ThemeToggleButton } from "./theme-toggle-button";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Blogs", href: "/blogs" },
+] as const;
 
 export function Header() {
   const [open] = useState(false);
@@ -50,10 +56,21 @@ export function Header() {
           },
         )}
       >
-        <span className="text-2xl font-handwriting text-foreground">
+        <Link href="/" className="text-2xl font-handwriting text-foreground">
           Jagrit
-        </span>
-        <ThemeToggleButton />
+        </Link>
+        <div className="flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <ThemeToggleButton />
+        </div>
       </nav>
 
       {/* <div

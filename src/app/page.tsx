@@ -9,8 +9,18 @@ import { Profile } from "@/components/profile";
 import { Skills } from "@/components/skills";
 import { SomeProjects } from "@/components/some-projects";
 import { Separator } from "@/components/ui/separator";
+import { client } from "@/sanity/lib/client";
+import { PROJECTS_QUERY, type ProjectSummary } from "@/sanity/lib/queries";
+import { urlFor } from "@/sanity/lib/image";
 
-const Home = () => {
+export default async function Home() {
+  const rawProjects = await client.fetch<ProjectSummary[]>(PROJECTS_QUERY, {}, { next: { revalidate: 60 } });
+
+  const projects = rawProjects.map((p) => ({
+    ...p,
+    imageUrl: p.mainImage ? urlFor(p.mainImage).width(600).height(400).url() : null,
+  }));
+
   return (
     <div className="bg-background">
       <Header />
@@ -25,7 +35,7 @@ const Home = () => {
         <Separator />
         <Skills />
         <Separator />
-        <SomeProjects />
+        <SomeProjects projects={projects} />
         <Separator />
         <Contributions />
         <Separator />
@@ -35,6 +45,4 @@ const Home = () => {
       </main>
     </div>
   );
-};
-
-export default Home
+}
