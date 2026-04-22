@@ -24,6 +24,8 @@ export type ProjectSummary = {
 	projectUrl: string | null;
 	repoUrl: string | null;
 	tags: string[] | null;
+	links: Array<{ label: string; url: string }> | null;
+	ytLink: string | null;
 	body: unknown[] | null;
 };
 
@@ -62,6 +64,8 @@ export const PROJECTS_QUERY = defineQuery(
 		projectUrl,
 		repoUrl,
 		tags,
+		links[]{ label, url },
+		ytLink,
 		body
 	}`,
 );

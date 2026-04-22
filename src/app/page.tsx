@@ -18,7 +18,7 @@ export default async function Home() {
 
   const projects = rawProjects.map((p) => ({
     ...p,
-    imageUrl: p.mainImage ? urlFor(p.mainImage).width(600).height(400).url() : null,
+    imageUrl: p.mainImage ? urlFor(p.mainImage).url() : null,
   }));
 
   return (

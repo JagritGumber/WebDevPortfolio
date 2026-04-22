@@ -48,6 +48,28 @@ export const project = defineType({
 			options: { layout: "tags" },
 		}),
 		defineField({
+			name: "ytLink",
+			title: "YouTube Embed URL",
+			type: "url",
+		}),
+		defineField({
+			name: "links",
+			title: "Links",
+			type: "array",
+			of: [
+				{
+					type: "object",
+					fields: [
+						{ name: "label", title: "Label", type: "string" },
+						{ name: "url", title: "URL", type: "url" },
+					],
+					preview: {
+						select: { title: "label", subtitle: "url" },
+					},
+				},
+			],
+		}),
+		defineField({
 			name: "order",
 			title: "Display Order",
 			type: "number",
