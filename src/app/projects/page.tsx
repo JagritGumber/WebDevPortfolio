@@ -27,13 +27,15 @@ export default async function ProjectsPage() {
     <div className="bg-background">
       <Header />
       <main className="mx-auto max-w-4xl relative flex flex-col">
-        <section aria-label="All Projects" className="p-4 lg:p-8">
-          <h1 className="font-serif text-3xl text-foreground">Projects</h1>
-          <span className="text-muted-foreground block mb-6">
-            A collection of things I&apos;ve built over the years.
-          </span>
+        <section aria-label="All Projects" className="pt-4 lg:pt-8 flex flex-col">
+          <div className="px-4 lg:px-8 mb-6">
+            <h1 className="font-serif text-3xl text-foreground">Projects</h1>
+            <span className="text-muted-foreground block">
+              A collection of things I&apos;ve built over the years.
+            </span>
+          </div>
           {projects.length === 0 ? (
-            <p className="text-muted-foreground text-center py-12">
+            <p className="text-muted-foreground text-center py-12 px-4">
               No projects yet. Check back soon.
             </p>
           ) : (

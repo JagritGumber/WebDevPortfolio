@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import {
   ProjectShowcase,
   type ProjectWithImage,
@@ -8,9 +9,24 @@ export const ProjectsGrid = ({
 }: {
   projects: ProjectWithImage[];
 }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    {projects.map((project) => (
-      <ProjectShowcase key={project._id} project={project} />
-    ))}
+  <div className="grid grid-cols-1 md:grid-cols-3">
+    {projects.map((project, i) => {
+      const isFirstRow = i < 3;
+      const isFirstCol = i % 3 === 0;
+      return (
+        <div
+          key={project._id}
+          className={cn(
+            "border-dotted border-border",
+            i > 0 && "border-t",
+            "md:border-t-0",
+            !isFirstRow && "md:border-t",
+            !isFirstCol && "md:border-l"
+          )}
+        >
+          <ProjectShowcase project={project} />
+        </div>
+      );
+    })}
   </div>
 );

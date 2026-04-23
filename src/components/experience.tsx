@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 const experienceRows = [
   {
     companyName: "Algo One AI",
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     src: "/algo-one-ai.png",
     contClassName: "bg-white",
     imgClassName: "-translate-x-[1px] -translate-y-[3px]",
@@ -36,35 +36,31 @@ export const Experience = () => {
       <span className="text-muted-foreground mb-4">What I work on</span>
       {experienceRows.map((exp) => {
         return (
-          <div key={exp.src} className="py-4 relative">
-            <div className={cn("lg:px-4 flex flex-col gap-4 items-topline")}>
-              <div
-                className={cn(
-                  exp.contClassName,
-                  "size-16 rounded-full flex items-center justify-center"
-                )}
-              >
-                <img
-                  src={exp.src}
-                  alt={exp.companyName}
-                  className={cn(exp.imgClassName, "size-12")}
-                />
-              </div>
-              <div>
-                <h3 className="text-lg text-bold font-serif text-foreground">
-                  {exp.companyName}
-                </h3>
-                <span className="text-md text-muted-foreground block">
-                  {exp.role}
-                </span>
-              </div>
-              <div className="absolute top-4 right-0 md:ml-auto">
-                <span className="text-foreground">
-                  {exp.start} - {exp.end}
-                </span>
-              </div>
+          <div key={exp.src} className="py-4 relative flex flex-col gap-4">
+            <div
+              className={cn(
+                exp.contClassName,
+                "size-16 rounded-full flex items-center justify-center"
+              )}
+            >
+              <img
+                src={exp.src}
+                alt={exp.companyName}
+                className={cn(exp.imgClassName, "size-12")}
+              />
             </div>
-            <div className="pt-4 lg:pt-0 lg:m-4 text-foreground text-md flex flex-col gap-4">
+            <div>
+              <h3 className="text-lg text-bold font-serif text-foreground">
+                {exp.companyName}
+              </h3>
+              <span className="text-md text-muted-foreground block">
+                {exp.role}
+              </span>
+            </div>
+            <span className="text-foreground absolute top-4 right-0">
+              {exp.start} - {exp.end}
+            </span>
+            <div className="text-foreground text-md flex flex-col gap-4">
               {exp.description}
             </div>
           </div>

@@ -37,6 +37,7 @@ next-env.d.ts
 
 # Sanity
 /dist
+/.sanity
 
 # OpenNext
 /.open-next

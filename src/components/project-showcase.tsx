@@ -13,26 +13,26 @@ export const ProjectShowcase = ({ project }: { project: ProjectWithImage }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex flex-col bg-muted-background rounded-md overflow-hidden border border-border">
+    <div className="group flex flex-col bg-background p-3 lg:p-4 h-full">
       {project.imageUrl && (
-        <div className="relative aspect-video">
+        <div className="relative aspect-video overflow-hidden">
           <Image
             src={project.imageUrl}
             alt={project.title ?? ""}
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
       )}
-      <div className="p-4 flex-1 flex flex-col">
+      <div className="pt-3 flex-1 flex flex-col">
         <span className="text-2xl text-foreground font-serif block">
           {project.title}
         </span>
-        <span className="text-muted-foreground block">
+        <span className="text-muted-foreground block text-sm">
           {project.description}
         </span>
-        <div className="mt-auto pt-4 flex justify-end">
+        <div className="mt-auto pt-3 flex justify-end">
           <Button onClick={() => setOpen(true)}>View More</Button>
         </div>
       </div>
