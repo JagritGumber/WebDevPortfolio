@@ -188,7 +188,7 @@ export const Skills = () => {
   return (
     <section aria-label="Skills" className="flex flex-col p-4 lg:p-8">
       <h2 className="font-handwriting text-3xl text-foreground">
-        Technologies I use
+        Technologies I&apos;ve worked with
       </h2>
       <span className="text-muted-foreground mb-4">
         These've helped me through the highs and lows of my complex projects.
