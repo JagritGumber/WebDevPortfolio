@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useScroll } from "@/hooks/use-scroll";
+import { useModalStore } from "@/lib/modal-store";
 import { cn } from "@/lib/utils";
 import { ThemeToggleButton } from "./theme-toggle-button";
 
@@ -13,6 +14,8 @@ const navLinks = [
 
 export function Header() {
   const scrolled = useScroll(10);
+  const modalOpen = useModalStore((s) => s.count > 0);
+  const compact = scrolled || modalOpen;
 
   return (
     <header
@@ -20,7 +23,7 @@ export function Header() {
         "sticky top-0 z-50 mx-auto max-w-6xl w-full border-b border-transparent md:rounded-full md:border md:transition-all md:duration-300 md:ease-out",
         {
           "bg-background/90 backdrop-blur-md border-border md:top-4 md:max-w-3xl md:shadow":
-            scrolled,
+            compact,
         }
       )}
     >

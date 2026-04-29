@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect } from "react";
 import { Button } from "./button";
 import { Icon } from "@iconify/react";
+import { useModalStore } from "@/lib/modal-store";
 
 export const ProjectShowcaseModal = ({
   open = false,
@@ -12,6 +16,15 @@ export const ProjectShowcaseModal = ({
   title: React.JSX.Element;
   body: React.JSX.Element;
 }) => {
+  const inc = useModalStore((s) => s.inc);
+  const dec = useModalStore((s) => s.dec);
+  useEffect(() => {
+    if (open) {
+      inc();
+      return dec;
+    }
+  }, [open, inc, dec]);
+
   return (
     <dialog
       open={open}
