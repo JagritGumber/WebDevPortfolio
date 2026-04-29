@@ -9,7 +9,6 @@ import { ThemeToggleButton } from "./theme-toggle-button";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
-  { label: "Blogs", href: "/blogs" },
 ] as const;
 
 export function Header() {
