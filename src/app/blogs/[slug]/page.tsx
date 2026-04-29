@@ -20,8 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await client.fetch<Post | null>(POST_QUERY, { slug });
   if (!post) return {};
   return {
-    title: `${post.title} | Jagrit Gumber`,
+    title: post.title ?? undefined,
     description: post.excerpt ?? "",
+    robots: { index: false, follow: false },
   };
 }
 

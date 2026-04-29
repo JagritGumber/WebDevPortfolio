@@ -7,8 +7,9 @@ import { Separator } from "@/components/ui/separator";
 import { ProjectsGrid } from "@/components/projects-grid";
 
 export const metadata = {
-  title: "Projects | Jagrit Gumber",
-  description: "A collection of things I've built.",
+  title: "Projects",
+  description:
+    "A collection of things I've built. Native Rust tools, full-stack SaaS, and game jam entries.",
 };
 
 export default async function ProjectsPage() {

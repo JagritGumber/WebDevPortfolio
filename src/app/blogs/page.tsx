@@ -6,8 +6,9 @@ import { Separator } from "@/components/ui/separator";
 import { BlogPostCard } from "@/components/blog-post-card";
 
 export const metadata = {
-  title: "Blogs | Jagrit Gumber",
-  description: "Case studies, thoughts, and long-form writing",
+  title: "Blogs",
+  description: "Case studies, thoughts, and long-form writing.",
+  robots: { index: false, follow: false },
 };
 
 export default async function BlogsPage() {

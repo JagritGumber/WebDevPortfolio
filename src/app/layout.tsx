@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { JsonLd } from "@/components/json-ld";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,10 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Jagrit Gumber",
-  description: "Full Stack Developer",
-};
+export { metadata } from "./metadata";
+
+const themeInitScript = `(function() {
+  try {
+    const theme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();`;
 
 export default function RootLayout({
   children,
@@ -25,37 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-							(function() {
-								try {
-									const theme = localStorage.getItem('theme') || 
-										(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-									document.documentElement.setAttribute('data-theme', theme);
-								} catch (e) {}
-							})();
-						`,
-          }}
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <JsonLd />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
