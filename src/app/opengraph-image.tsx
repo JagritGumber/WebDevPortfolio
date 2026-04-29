@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 
+export const runtime = "edge";
 export const alt =
   "Jagrit Gumber - Full-stack + native Rust engineer";
 export const size = { width: 1200, height: 630 };
