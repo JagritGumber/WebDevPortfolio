@@ -9,7 +9,7 @@ const socials = [
   {
     name: "X (Formerly Twitter)",
     icon: "simple-icons:x",
-    link: "https://x.com/Jagrit_Gumber",
+    link: "https://x.com/ItsRoboki",
   },
   {
     name: "Mail",

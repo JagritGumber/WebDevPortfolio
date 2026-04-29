@@ -9,7 +9,7 @@ const personSchema = {
     "Full-stack + native Rust engineer. Ships production SaaS by day, OSS and apps by night.",
   sameAs: [
     "https://github.com/JagritGumber",
-    "https://x.com/Jagrit_Gumber",
+    "https://x.com/ItsRoboki",
     "https://www.linkedin.com/in/jagrit-gumber-2841a52a9",
   ],
 };

@@ -31,13 +31,22 @@ export const metadata: Metadata = {
     title: "Jagrit Gumber",
     description,
     locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 3000,
+        height: 1000,
+        alt: "Jagrit Gumber - Full-stack + native Rust engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@Jagrit_Gumber",
-    creator: "@Jagrit_Gumber",
+    site: "@ItsRoboki",
+    creator: "@ItsRoboki",
     title: "Jagrit Gumber",
     description,
+    images: ["/og.png"],
   },
   robots: {
     index: true,
