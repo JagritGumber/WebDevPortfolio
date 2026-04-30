@@ -40,8 +40,8 @@ function socialRow(y, icon, label) {
   const iconColor = "#a08c7a";
   const labelColor = "#ece2d3";
   return `
-  <svg x="60" y="${y}" width="32" height="32" viewBox="0 0 24 24"><path d="${ICONS[icon]}" fill="${iconColor}"/></svg>
-  <text x="110" y="${y + 25}" font-family="Poppins" font-size="26" font-weight="500" fill="${labelColor}">${label}</text>`;
+  <svg x="60" y="${y}" width="40" height="40" viewBox="0 0 24 24"><path d="${ICONS[icon]}" fill="${iconColor}"/></svg>
+  <text x="120" y="${y + 32}" font-family="Poppins" font-size="34" font-weight="500" fill="${labelColor}">${label}</text>`;
 }
 
 const [ovo400, poppins400, poppins500, picBytes] = await Promise.all([
@@ -66,16 +66,16 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 
   <text x="60" y="160" font-family="Ovo" font-size="130" fill="#ece2d3">Jagrit Gumber</text>
   <text x="60" y="225" font-family="Poppins" font-size="46" font-weight="500" fill="#d4a374">Full-stack + native Rust</text>
-  <text x="60" y="320" font-family="Poppins" font-size="28" font-weight="400" fill="#a08c7a">Ships production SaaS by day,</text>
-  <text x="60" y="358" font-family="Poppins" font-size="28" font-weight="400" fill="#a08c7a">OSS and apps by night.</text>
+  <text x="60" y="325" font-family="Poppins" font-size="36" font-weight="400" fill="#a08c7a">Ships production SaaS by day,</text>
+  <text x="60" y="375" font-family="Poppins" font-size="36" font-weight="400" fill="#a08c7a">OSS and apps by night.</text>
 
-  ${socialRow(450, "github", "JagritGumber")}
-  ${socialRow(500, "linkedin", "Jagrit Gumber")}
+  ${socialRow(440, "github", "JagritGumber")}
+  ${socialRow(495, "linkedin", "Jagrit Gumber")}
   ${socialRow(550, "x", "@ItsRoboki")}
 
   <image xlink:href="data:image/jpeg;base64,${picB64}" x="830" y="155" width="320" height="320" clip-path="url(#photoClip)" preserveAspectRatio="xMidYMid slice"/>
 
-  <text x="1140" y="600" font-family="Poppins" font-size="22" font-weight="400" fill="#695b50" text-anchor="end">jagritgumber.com</text>
+  <text x="1140" y="605" font-family="Poppins" font-size="34" font-weight="500" fill="#a08c7a" text-anchor="end">jagritgumber.com</text>
 </svg>`;
 
 await fs.writeFile(SVG_TMP, svg);
