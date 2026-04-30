@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og.png",
-        width: 3000,
-        height: 1000,
+        width: 1200,
+        height: 630,
         alt: "Jagrit Gumber - Full-stack + native Rust engineer",
       },
     ],
