@@ -1,4 +1,4 @@
-// Builds public/og.png from a Geist-typed SVG with embedded profile picture.
+// Builds public/og.png from an Ovo+Poppins-typed SVG with embedded profile picture.
 // Run: bun scripts/build-og.mjs
 // Requires bunx @resvg/resvg-js-cli to be available on PATH (auto-fetched by bunx).
 
@@ -12,7 +12,8 @@ const SVG_TMP = path.join(ROOT, ".og-build.svg");
 const PNG_OUT = path.join(PUBLIC, "og.png");
 
 async function loadGoogleFontWoff2(family, weight) {
-  const cssUrl = `https://fonts.googleapis.com/css2?family=${family}:wght@${weight}&display=swap`;
+  const weightPart = weight ? `:wght@${weight}` : "";
+  const cssUrl = `https://fonts.googleapis.com/css2?family=${family}${weightPart}&display=swap`;
   const css = await fetch(cssUrl, {
     headers: {
       "User-Agent":
@@ -25,9 +26,10 @@ async function loadGoogleFontWoff2(family, weight) {
   return Buffer.from(buf).toString("base64");
 }
 
-const [geist400, geist500, picBytes] = await Promise.all([
-  loadGoogleFontWoff2("Geist", "400"),
-  loadGoogleFontWoff2("Geist", "500"),
+const [ovo400, poppins400, poppins500, picBytes] = await Promise.all([
+  loadGoogleFontWoff2("Ovo", null),
+  loadGoogleFontWoff2("Poppins", "400"),
+  loadGoogleFontWoff2("Poppins", "500"),
   fs.readFile(path.join(PUBLIC, "profile-pic.jpg")),
 ]);
 const picB64 = picBytes.toString("base64");
@@ -36,18 +38,20 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <style>
-      @font-face { font-family: 'Geist'; font-weight: 400; src: url(data:font/woff2;base64,${geist400}) format('woff2'); }
-      @font-face { font-family: 'Geist'; font-weight: 500; src: url(data:font/woff2;base64,${geist500}) format('woff2'); }
+      @font-face { font-family: 'Ovo'; src: url(data:font/woff2;base64,${ovo400}) format('woff2'); }
+      @font-face { font-family: 'Poppins'; font-weight: 400; src: url(data:font/woff2;base64,${poppins400}) format('woff2'); }
+      @font-face { font-family: 'Poppins'; font-weight: 500; src: url(data:font/woff2;base64,${poppins500}) format('woff2'); }
     </style>
-    <clipPath id="circ"><circle cx="200" cy="170" r="80"/></clipPath>
+    <clipPath id="circ"><circle cx="92" cy="92" r="60"/></clipPath>
   </defs>
   <rect width="1200" height="630" fill="#1c1815"/>
-  <image xlink:href="data:image/jpeg;base64,${picB64}" x="120" y="90" width="160" height="160" clip-path="url(#circ)" preserveAspectRatio="xMidYMid slice"/>
-  <text x="310" y="158" font-family="Geist" font-size="32" font-weight="500" fill="#ece2d3">@ItsRoboki</text>
-  <text x="310" y="200" font-family="Geist" font-size="22" font-weight="400" fill="#a08c7a">jagritgumber.com</text>
-  <text x="120" y="380" font-family="Geist" font-size="116" font-weight="500" fill="#ece2d3">Jagrit Gumber</text>
-  <text x="120" y="450" font-family="Geist" font-size="44" font-weight="500" fill="#d4a374">Full-stack + native Rust</text>
-  <text x="120" y="510" font-family="Geist" font-size="30" font-weight="400" fill="#a08c7a">Ships production SaaS by day, OSS and apps by night.</text>
+  <image xlink:href="data:image/jpeg;base64,${picB64}" x="32" y="32" width="120" height="120" clip-path="url(#circ)" preserveAspectRatio="xMidYMid slice"/>
+  <text x="170" y="86" font-family="Poppins" font-size="36" font-weight="500" fill="#ece2d3">@ItsRoboki</text>
+  <text x="170" y="128" font-family="Poppins" font-size="26" font-weight="400" fill="#a08c7a">jagritgumber.com</text>
+  <text x="32" y="370" font-family="Ovo" font-size="170" fill="#ece2d3">Jagrit Gumber</text>
+  <text x="32" y="460" font-family="Poppins" font-size="60" font-weight="500" fill="#d4a374">Full-stack + native Rust</text>
+  <text x="32" y="530" font-family="Poppins" font-size="36" font-weight="400" fill="#a08c7a">Ships production SaaS by day, OSS and apps by night.</text>
+  <text x="32" y="600" font-family="Poppins" font-size="24" font-weight="400" fill="#695b50">github.com/JagritGumber</text>
 </svg>`;
 
 await fs.writeFile(SVG_TMP, svg);
